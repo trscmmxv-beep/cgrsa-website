@@ -61,7 +61,7 @@
   .ring{position:absolute;inset:0;border-radius:50%;border:2px dashed rgba(228,31,41,.35);animation:spin 40s linear infinite}
   .ring.r2{inset:9%;border:1px solid rgba(255,255,255,.12);animation-duration:60s;animation-direction:reverse}
   @keyframes spin{to{transform:rotate(360deg)}}
-  .emblem-core{position:absolute;inset:18%;border-radius:50%;background:linear-gradient(145deg,var(--navy-2),var(--navy));border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;box-shadow:0 30px 80px rgba(0,0,0,.45),inset 0 0 60px rgba(228,31,41,.08)}
+  .emblem-core{position:absolute;inset:18%;border-radius:50%;background:radial-gradient(circle at 50% 45%,rgba(20,26,79,.42),rgba(20,26,79,.12) 70%,transparent);backdrop-filter:blur(3px);border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;box-shadow:none}
   .emblem-core .est{font-family:"Barlow Condensed",sans-serif;letter-spacing:3px;font-size:.9rem;color:var(--saffron-2);text-transform:uppercase}
   .orbit-logo{position:absolute;width:78px;height:78px}
   .orbit-logo.a{top:2%;left:50%;transform:translateX(-50%)}
@@ -289,3 +289,124 @@
   .coach small{color:var(--muted);font-size:.82rem}
   .coach .coach-role{display:block;margin:4px 0 6px;color:var(--saffron-2);font-size:.72rem;font-weight:600;letter-spacing:1.2px;text-transform:uppercase}
   .coach small{display:block;line-height:1.45}
+
+  /* ================= 64th NATIONALS ================= */
+  :root{--n-gold:#f5b83d;--n-gold-2:#ffd77a;--n-violet:#a43bd6;--n-violet-2:#d07bff}
+  .n64-hero{position:relative;padding:70px 0 64px;overflow:hidden;border-bottom:1px solid var(--line);
+    background:radial-gradient(800px 480px at 88% 30%,rgba(164,59,214,.32),transparent 62%),
+               radial-gradient(620px 420px at 70% 95%,rgba(245,184,61,.16),transparent 60%),
+               linear-gradient(180deg,var(--navy),var(--ink))}
+  .n64-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .n64-eyebrow{border-color:rgba(245,184,61,.5);background:rgba(245,184,61,.1);color:var(--n-gold-2)}
+  .n64-eyebrow i{background:var(--n-gold)}
+  .n64-hero h1{font-size:clamp(2.5rem,5.4vw,4.6rem);margin:18px 0 16px}
+  .n64-hero h1 em{background:linear-gradient(90deg,var(--n-gold),var(--n-violet-2));-webkit-background-clip:text;background-clip:text;color:transparent;font-style:normal}
+  .n64-meta{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+  .n64-meta div{padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.035)}
+  .n64-meta small{display:block;font-size:.7rem;letter-spacing:1.4px;text-transform:uppercase;color:var(--n-gold-2);font-weight:600}
+  .n64-meta b{display:block;font-size:.98rem;margin-top:3px;line-height:1.35}
+  .n64-meta a{color:var(--muted);font-size:.8rem;text-decoration:underline;text-underline-offset:3px}
+  .n64-meta a:hover{color:#fff}
+  .btn-gold{background:linear-gradient(90deg,var(--n-gold),#f09a2c);color:#1a1440}
+  .btn-gold:hover{transform:translateY(-2px);filter:brightness(1.07)}
+  .btn-wa{background:#1fa855;color:#fff}.btn-wa:hover{background:#178a45;transform:translateY(-2px)}
+  .n64-poster{position:relative;justify-self:end;max-width:520px;width:100%}
+  .n64-poster::before{content:"";position:absolute;inset:-18px;border-radius:30px;background:conic-gradient(from 210deg,var(--n-violet),var(--n-gold),var(--n-violet-2),var(--n-gold),var(--n-violet));filter:blur(34px);opacity:.5;animation:n64glow 9s linear infinite}
+  @keyframes n64glow{to{transform:rotate(360deg)}}
+  .n64-poster img{position:relative;width:100%;height:auto;border-radius:22px;box-shadow:0 30px 70px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.4);animation:n64float 6s ease-in-out infinite}
+  @keyframes n64float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+  .n64-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:-34px;position:relative;z-index:2}
+  .n64-stat{padding:20px 14px;text-align:center;border-radius:16px;background:linear-gradient(160deg,#232b7c,#171d5a);border:1px solid rgba(255,255,255,.12);box-shadow:0 14px 30px rgba(0,0,0,.3)}
+  .n64-stat b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:2.4rem;line-height:1;font-weight:800;background:linear-gradient(180deg,#fff,var(--n-gold-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .n64-stat span{font-size:.74rem;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
+  .n64-section{padding:80px 0 0}
+  .n64-msg{margin-top:26px;padding:22px 26px;border-left:4px solid var(--n-gold);border-radius:0 14px 14px 0;background:rgba(245,184,61,.06);font-size:1.05rem;color:#dfe3f7;max-width:860px}
+  .n64-tools{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin:34px 0 20px;position:sticky;top:84px;z-index:20;padding:12px;border-radius:18px;background:rgba(14,19,60,.92);backdrop-filter:blur(10px);border:1px solid var(--line)}
+  .n64-tabs{display:flex;gap:6px;padding:5px;border-radius:999px;background:rgba(255,255,255,.06)}
+  .n64-tabs button{border:0;cursor:pointer;padding:11px 24px;border-radius:999px;font:600 .95rem Inter,sans-serif;color:#c9cdf0;background:transparent;transition:.2s}
+  .n64-tabs button b{font-family:"Barlow Condensed",sans-serif;font-size:1.05rem;letter-spacing:.5px;text-transform:uppercase}
+  .n64-tabs button small{opacity:.7;margin-left:6px;font-weight:500}
+  .n64-tabs button.on{background:linear-gradient(90deg,var(--n-violet),#7c2fc0);color:#fff;box-shadow:0 6px 18px rgba(164,59,214,.4)}
+  .n64-search{flex:1;min-width:220px;max-width:340px;position:relative}
+  .n64-search input{width:100%;padding:12px 16px 12px 40px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:#fff;font:500 .92rem Inter,sans-serif;outline:0}
+  .n64-search input:focus{border-color:var(--n-gold)}
+  .n64-search::before{content:"⌕";position:absolute;left:15px;top:50%;transform:translateY(-52%);color:var(--muted);font-size:1.2rem}
+  .n64-jump{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+  .n64-jump a{padding:6px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.14);font-size:.8rem;color:#c9cdf0;transition:.2s}
+  .n64-jump a:hover{border-color:var(--n-gold);color:#fff}
+  .n64-cat{margin-top:30px;border-radius:22px;border:1px solid var(--line);background:rgba(255,255,255,.025);overflow:hidden;scroll-margin-top:170px}
+  .n64-cat-h{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 24px;background:linear-gradient(90deg,rgba(164,59,214,.35),rgba(43,51,135,.55) 60%,rgba(43,51,135,.2))}
+  .n64-cat-h h3{font-family:"Barlow Condensed",sans-serif;font-size:1.7rem;text-transform:uppercase;letter-spacing:.5px;line-height:1}
+  .n64-cat-h h3 small{font-size:.95rem;color:var(--n-gold-2);margin-left:10px;letter-spacing:1px}
+  .n64-cat-h span{font-size:.8rem;color:#e3e5fa;padding:6px 12px;border-radius:999px;background:rgba(0,0,0,.25);white-space:nowrap}
+  .n64-cols{display:grid;grid-template-columns:1fr 1fr}
+  .n64-cols.one{grid-template-columns:1fr}
+  .n64-col{padding:18px 20px 22px}
+  .n64-col+.n64-col{border-left:1px solid var(--line)}
+  .n64-col h4{display:flex;align-items:center;gap:8px;font-size:.74rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+  .n64-col h4 i{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:.75rem;color:#fff}
+  .n64-col.boys h4 i{background:#2f6fe0}.n64-col.girls h4 i{background:#d9408a}
+  .n64-sk{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;padding:14px;border-radius:14px;border:1px solid transparent;transition:.2s}
+  .n64-sk+.n64-sk{margin-top:6px}
+  .n64-sk:hover{background:rgba(255,255,255,.04);border-color:var(--line)}
+  .n64-chest{grid-row:span 2;min-width:64px;height:62px;padding:0 7px;border-radius:14px;display:grid;place-items:center;text-align:center;background:#fff;color:#1a1440;box-shadow:inset 0 -4px 0 var(--n-gold)}
+  .n64-chest small{display:block;font-size:.54rem;letter-spacing:1.2px;font-weight:700;color:#7b7fa8;margin-bottom:-2px}
+  .n64-chest b{font-family:"Barlow Condensed",sans-serif;font-size:1.55rem;line-height:1}
+  .n64-pic{grid-row:span 2;position:relative;width:84px;padding-bottom:17px}
+  .n64-pic img{width:84px;height:84px;object-fit:cover;border-radius:16px;border:2px solid rgba(245,184,61,.75);box-shadow:0 8px 18px rgba(0,0,0,.35);background:#2a3070}
+  .n64-pic span{position:absolute;left:50%;bottom:0;transform:translateX(-50%);white-space:nowrap;padding:3px 9px;border-radius:999px;background:#fff;color:#1a1440;font:800 .95rem "Barlow Condensed",sans-serif;letter-spacing:.4px;box-shadow:0 3px 8px rgba(0,0,0,.3)}
+  .n64-pic span small{font:700 .55rem Inter,sans-serif;letter-spacing:1px;color:#7b7fa8;vertical-align:1px}
+  .n64-name{font-weight:700;font-size:1.05rem;line-height:1.25}
+  .n64-name small{display:block;font-weight:500;font-size:.78rem;color:var(--muted);letter-spacing:.3px;margin-top:2px}
+  .n64-name small b{color:#dfe3f7;font-weight:600}
+  .n64-races{grid-column:2;display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+  .n64-race{font-size:.74rem;padding:4px 10px;border-radius:999px;white-space:nowrap;font-weight:500}
+  .n64-race.rink{background:rgba(164,59,214,.2);color:#ecd2ff;border:1px solid rgba(208,123,255,.3)}
+  .n64-race.road{background:rgba(245,184,61,.14);color:#ffe3a6;border:1px solid rgba(245,184,61,.3)}
+  .n64-race.special{background:rgba(31,157,85,.18);color:#b9f0cf;border:1px solid rgba(31,157,85,.4)}
+  .n64-empty{color:var(--muted);font-size:.9rem;padding:14px}
+  .n64-legend{display:flex;flex-wrap:wrap;gap:10px 20px;font-size:.82rem;color:var(--muted);margin-top:22px}
+  .n64-legend span{display:inline-flex;align-items:center;gap:8px}
+  .n64-sk.hide,.n64-cat.hide{display:none}
+  .n64-teams{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:30px}
+  .n64-team{border-radius:22px;border:1px solid var(--line);background:rgba(255,255,255,.03);padding:26px}
+  .n64-team header{all:unset;display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+  .n64-team h3{font-family:"Barlow Condensed",sans-serif;font-size:1.6rem;text-transform:uppercase;line-height:1.05}
+  .n64-team header p{font-size:.84rem;color:var(--muted)}
+  .n64-report{display:inline-flex;align-items:baseline;gap:10px;padding:8px 14px;border-radius:12px;background:rgba(245,184,61,.1);border:1px solid rgba(245,184,61,.3)}
+  .n64-report small{font-size:.66rem;letter-spacing:1.3px;text-transform:uppercase;color:var(--n-gold-2)}
+  .n64-report b{font-size:.95rem}
+  .n64-people{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+  .n64-person{text-align:center}
+  .n64-av{width:92px;height:92px;margin:0 auto 10px;border-radius:50%;overflow:hidden;display:grid;place-items:center;background:linear-gradient(140deg,var(--n-violet),var(--logo-navy));font:800 1.7rem "Barlow Condensed",sans-serif;box-shadow:0 0 0 3px rgba(245,184,61,.55)}
+  .n64-av img{width:100%;height:100%;object-fit:cover}
+  .n64-person b{display:block;font-size:.98rem;line-height:1.25}
+  .n64-person span{font-size:.76rem;color:var(--n-gold-2);letter-spacing:.8px;text-transform:uppercase}
+  .n64-sign{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:flex-end;margin-top:44px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+  .n64-sign b{color:#fff;display:block;font-size:1rem}
+  .n64-sign .who{display:flex;gap:44px;flex-wrap:wrap}
+  /* homepage announcement strip */
+  .n64-strip{display:block;background:linear-gradient(90deg,#3a1a6e,#5b2394 40%,#3a1a6e);border-bottom:1px solid rgba(245,184,61,.35)}
+  .n64-strip .wrap{display:flex;align-items:center;gap:16px;padding:12px 0;flex-wrap:wrap}
+  .n64-strip .pill{font-size:.7rem;font-weight:700;letter-spacing:1.5px;padding:5px 11px;border-radius:999px;background:var(--n-gold);color:#1a1440;text-transform:uppercase;animation:pulse 2.2s infinite}
+  .n64-strip p{flex:1;min-width:240px;font-size:.95rem}
+  .n64-strip p b{color:var(--n-gold-2)}
+  .n64-strip .go{font-weight:700;font-size:.9rem;white-space:nowrap;padding:8px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.35);transition:.2s}
+  .n64-strip:hover .go{background:#fff;color:#3a1a6e}
+  @media (max-width:960px){
+    .n64-grid{grid-template-columns:1fr;gap:40px}.n64-poster{justify-self:center;max-width:440px}
+    .n64-stats{grid-template-columns:repeat(3,1fr);margin-top:30px}
+    .n64-teams{grid-template-columns:1fr}
+    .n64-tools{top:64px}
+  }
+  @media (max-width:720px){
+    .n64-cols{grid-template-columns:1fr}.n64-col+.n64-col{border-left:0;border-top:1px solid var(--line)}
+    .n64-meta{grid-template-columns:1fr}
+    .n64-stats{grid-template-columns:repeat(2,1fr)}.n64-stats .n64-stat:last-child{grid-column:span 2}
+    .n64-tools{position:static}.n64-tabs{width:100%}.n64-tabs button{flex:1;padding:11px 10px}.n64-search{max-width:none}
+    .n64-cat-h{padding:14px 18px;flex-wrap:wrap}.n64-col{padding:14px 12px 18px}
+    .n64-races{grid-column:1 / -1;margin-top:10px}.n64-sk{padding:12px 8px}.n64-pic{width:72px}.n64-pic img{width:72px;height:72px}
+    .n64-people{grid-template-columns:repeat(3,1fr);gap:10px}.n64-av{width:72px;height:72px;font-size:1.35rem}
+    .n64-strip .go{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){.n64-poster::before,.n64-poster img{animation:none}}

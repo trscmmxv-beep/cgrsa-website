@@ -117,8 +117,8 @@
   // careers
   const O = $("#openings");
   if (O && typeof OPENINGS !== "undefined") O.innerHTML = OPENINGS.length
-    ? `<table class="careers"><thead><tr><th>Role</th><th>Location</th><th>Type</th><th>Apply by</th><th></th></tr></thead><tbody>${OPENINGS.map((o) => `<tr><td><b>${esc(o.role)}</b>${o.details ? `<br><small class="tbd">${esc(o.details)}</small>` : ""}</td><td>${esc(o.location)}</td><td>${esc(o.type)}</td><td>${esc(o.lastDate)}</td><td><a class="btn btn-ghost" style="padding:8px 16px" href="mailto:cgrsa@rediffmail.com?subject=${encodeURIComponent("Application: " + o.role)}">Apply</a></td></tr>`).join("")}</tbody></table>`
-    : `<div class="empty">There are no openings right now. Send your CV to <a href="mailto:cgrsa@rediffmail.com?subject=Career%20interest" style="color:var(--saffron-2)">cgrsa@rediffmail.com</a> and we'll contact you when a role opens.</div>`;
+    ? `<table class="careers"><thead><tr><th>Role</th><th>Location</th><th>Type</th><th>Apply by</th><th></th></tr></thead><tbody>${OPENINGS.map((o) => `<tr><td><b>${esc(o.role)}</b>${o.details ? `<br><small class="tbd">${esc(o.details)}</small>` : ""}</td><td>${esc(o.location)}</td><td>${esc(o.type)}</td><td>${esc(o.lastDate)}</td><td><a class="btn btn-ghost" style="padding:8px 16px" href="mailto:cgsrsa@gmail.com?subject=${encodeURIComponent("Application: " + o.role)}">Apply</a></td></tr>`).join("")}</tbody></table>`
+    : `<div class="empty">There are no openings right now. Send your CV to <a href="mailto:cgsrsa@gmail.com?subject=Career%20interest" style="color:var(--saffron-2)">cgsrsa@gmail.com</a> and we'll contact you when a role opens.</div>`;
 
   // join tabs
   const T = $("#join-tabs");
@@ -133,7 +133,7 @@
     if (!f.reportValidity()) return;
     const lines = [...new FormData(f).entries()].map(([k, v]) => `${k}: ${v}`);
     const subj = `${f.dataset.kind} affiliation application`;
-    location.href = `mailto:cgrsa@rediffmail.com?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(lines.join("\n") + "\n\n(Please attach the documents listed on the website.)")}`;
+    location.href = `mailto:cgsrsa@gmail.com?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(lines.join("\n") + "\n\n(Please attach the documents listed on the website.)")}`;
   }));
 
   observe();

@@ -46,12 +46,11 @@ const CLUBS = [
 
 /* ---------- Gallery: 3–4 photos per event (in assets/gallery/<folder>/) ---------- */
 const GALLERY = [
-  { title: "1st Chhattisgarh State Roller Sports Ranking Championship", year: 2026, photos: ["state-ranking-2026/1.jpg","state-ranking-2026/2.jpg","state-ranking-2026/3.jpg","state-ranking-2026/4.jpg"] },
+  { title: "1st Chhattisgarh State Roller Sports Ranking Championship", year: 2026, photos: ["state-ranking-2026/2.jpg","state-ranking-2026/3.jpg","state-ranking-2026/4.jpg"] },
   { title: "2nd MPower Roller Skating Championship", year: 2026, photos: ["mpower-2026/1.jpg","mpower-2026/2.jpg"] },
-  { title: "Skating Carnival, DPS Chhindwara", year: 2025, photos: ["dps-chhindwara/1.jpg","dps-chhindwara/2.jpg"] },
-  { title: "Skating Carnival", year: 2025, photos: ["carnival-2025/1.jpg","carnival-2025/2.jpg"] },
+  { title: "6th Skating Carnival", year: 2025, photos: ["carnival-2025/1.jpg","carnival-2025/2.jpg"] },
   { title: "1st MPower Roller Skating Championship, Mahasamund", year: 2025, photos: ["mpower-2025/1.jpg","mpower-2025/2.jpg"] },
-  { title: "Durg District Championship", year: 2025, photos: ["durg-district-2025/1.jpg","durg-district-2025/2.jpg","durg-district-2025/3.jpg"] },
+  { title: "Durg District Championship", year: 2025, photos: ["durg-district-2025/1.jpg","durg-district-2025/3.jpg"] },
   { title: "17th State Roller Skating Championship", year: 2024, photos: ["state-17-2024/1.jpg","state-17-2024/2.jpg","state-17-2024/3.jpg"] },
   { title: "2nd National Ranking Roller Skating Racing Championship, KPS Sarona", year: 2022, photos: ["ranking-2022/1.jpg","ranking-2022/2.jpg","ranking-2022/3.jpg","ranking-2022/4.jpg"] },
   { title: "Team Chhattisgarh at the RSFI National Championship, Delhi & Mohali", year: 2021, photos: ["nationals-2021/1.jpg","nationals-2021/2.jpg","nationals-2021/3.jpg","nationals-2021/4.jpg"] },
