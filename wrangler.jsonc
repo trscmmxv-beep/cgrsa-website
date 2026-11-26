@@ -1,0 +1,7 @@
+{
+  "name": "cgrsa-website",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-11-23",
+  "assets": { "directory": "./", "binding": "ASSETS", "run_worker_first": ["/api/*"] },
+  "d1_databases": [{ "binding": "DB", "database_name": "cgrsa-portal", "database_id": "aab37bf6-8193-4a5a-8183-7549df63cb5d" }]
+}
